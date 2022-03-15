@@ -1,0 +1,372 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <nav class="con">
+			<input id="nav-toggle" type="checkbox">
+			<div class="logo">
+                <img src="images/Group 2 (1).png" alt="">
+			</div>
+			<ul class="links">
+				<li><a href="#blog" class="a">Blog</a></li>
+				<li><a href="#about" class="a">About us</a></li>
+				<li><button class="b btn2" data-modal-target = "#modal">SIGN IN</button></li>
+			</ul>
+			<label for="nav-toggle" class="icon-burger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</label>
+		</nav>
+    </div>
+	<div class="contain">
+		<section class="adv-section">
+			<div class="advert_slider">
+				<div class="slider">
+					<div class="slider__wrapper">
+					<div class="slider__items">
+						<div class="slider__item">
+						<img src="images/1.jpg" alt="" />
+						</div>
+						<div class="slider__item">
+						<img src="images/2.jpg" alt="" />
+						</div>
+						<div class="slider__item">
+						<img src="images/4.jpg" alt="" />
+						</div>
+					</div>
+					</div>
+					<span class="slider__control" data-slide="prev"></span>
+					<span class="slider__control" data-slide="next"></span>
+				</div>
+			</div>
+			<div class="cart-sidebar">
+				<h3 id="cart-title">Cart</h3>
+				<ul class="cart-items-list">
+					<li class="cart-item">
+						<div class="cart-image">
+							<img src="images/3.jpeg" alt="cart-item">
+						</div>
+						<div class="description">
+							<p class="items-description">Lorem ipsum dolor sit amet consectetur elit.</p>
+							<p id="price">Ksh 200</p>
+							<div class="quantity-set">
+								<p>Quantity: </p>
+								<button class="quantity-decre">-</button>
+								<input type="text" value="1" id="quantity">
+								<button class="quantity-incre">+</button>
+							</div>						
+						</div>				
+					</li>
+					<li class="cart-item">
+						<div class="cart-image">
+							<img src="images/3.jpeg" alt="cart-item">
+						</div>
+						<div class="description">
+							<p class="items-description">Lorem ipsum dolor sit amet consectetur elit.</p>
+							<p id="price">Ksh 200</p>
+							<div class="quantity-set">
+								<p>Quantity: </p>
+								<button class="quantity-decre">-</button>
+								<input type="text" value="1" id="quantity">
+								<button class="quantity-incre">+</button>
+							</div>						
+						</div>				
+					</li>
+					<li class="cart-item">
+						<div class="cart-image">
+							<img src="images/3.jpeg" alt="cart-item">
+						</div>
+						<div class="description">
+							<p class="items-description">Lorem ipsum dolor sit amet consectetur elit.</p>
+							<p id="price">Ksh 200</p>
+							<div class="quantity-set">
+								<p>Quantity: </p>
+								<button class="quantity-decre">-</button>
+								<input type="text" value="1" id="quantity">
+								<button class="quantity-incre">+</button>
+							</div>						
+						</div>				
+					</li>				
+				</ul>
+	
+				<div class="summary">
+					<p id="totalPrice">Total Price: <strong id="total-price">Ksh 2000</strong></p>
+					<button id="checkout" class="btn btn1">Proceed to Checkout</button>
+				</div>
+			</div>
+		</section>
+	
+		<main>
+			
+			<section>
+				<legend id="pop-section-title">
+					<h3>Food </h3>
+					<button id="view-more">View More</button>
+				</legend>
+				
+				<article class="populate-items">
+					<div class="pop-item">
+					
+						<img src="images/pasta.jpg" alt="">
+					
+					<div class="item-description">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+						<button class="add-to-cart-btn">Add to Cart</button>
+					</div>
+				</div>
+		
+				<div class="pop-item">
+					
+						<img src="images/pasta.jpg" alt="">
+					
+					<div class="item-description">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+						<button class="add-to-cart-btn">Add to Cart</button>
+					</div>
+				</div>
+				<div class="pop-item">
+					
+					<img src="images/pasta.jpg" alt="">
+				
+				<div class="item-description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+					<button class="add-to-cart-btn">Add to Cart</button>
+				</div>
+			</div>
+	
+			<div class="pop-item">
+					
+				<img src="images/pasta.jpg" alt="">
+			
+				<div class="item-description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+					<button class="add-to-cart-btn">Add to Cart</button>
+				</div>
+			
+			</div>
+	
+				</article>
+	
+			</section>
+		
+			<section>
+				<legend id="pop-section-title">
+					<h3>Drinks </h3>
+					<button id="view-more">View More</button>
+				</legend>
+				
+				<article class="populate-items">
+					<div class="pop-item">
+					
+						<img src="images/drinks.jpg" alt="">
+					
+					<div class="item-description">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+						<button class="add-to-cart-btn">Add to Cart</button>
+					</div>
+				</div>
+		
+				<div class="pop-item">
+					
+						<img src="images/drinks.jpg" alt="">
+					
+					<div class="item-description">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+						<button class="add-to-cart-btn">Add to Cart</button>
+					</div>
+				</div>
+				<div class="pop-item">
+					
+					<img src="images/drinks.jpg" alt="">
+				
+				<div class="item-description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+					<button class="add-to-cart-btn">Add to Cart</button>
+				</div>
+			</div>
+	
+			<div class="pop-item">
+					
+				<img src="images/drinks.jpg" alt="">
+			
+				<div class="item-description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+					<button class="add-to-cart-btn">Add to Cart</button>
+				</div>
+			</div>
+	
+				</article>
+				
+			</section>
+	
+			<section>
+				<legend id="pop-section-title">
+					<h3>Snacks </h3>
+					<button id="view-more">View More</button>
+				</legend>
+				
+				<article class="populate-items">
+					<div class="pop-item">
+					
+						<img src="images/img1.jpg" alt="">
+					
+					<div class="item-description">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+						<button class="add-to-cart-btn">Add to Cart</button>
+					</div>
+				</div>
+		
+				<div class="pop-item">
+					
+						<img src="images/img1.jpg" alt="">
+					
+					<div class="item-description">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+						<button class="add-to-cart-btn">Add to Cart</button>
+					</div>
+				</div>
+				<div class="pop-item">
+					
+					<img src="images/img1.jpg" alt="">
+				
+				<div class="item-description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+					<button class="add-to-cart-btn">Add to Cart</button>
+				</div>
+			</div>
+	
+			<div class="pop-item">
+					
+				<img src="images/img1.jpg" alt="">
+			
+				<div class="item-description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, culpa?</p>
+					<button class="add-to-cart-btn">Add to Cart</button>
+				</div>
+			
+			</div>
+	
+				</article>
+				
+		
+				
+			</section>
+	
+	
+			<div class="sidebar-blogs">
+				
+				<div class="posts">
+					<h3>Blogs</h3>
+					<div class="blogs">
+						<div class="card_f">
+							<h3>Today's News</h3>
+							<p>While I love the way it helps me to keep my finger on the pulse of many aspects of life I do worry from time to time that it has the potential ... </p>
+							<div class="inf">
+								<a href="" class="btn_B">Read More</a>
+							</div>
+						</div>
+						<div class="card_f">
+							<h3>Money Moves</h3>
+							<p>Find the latest photography accessories at affordable prices. ideas from others – at the expense of exercising your own brain power and developing ... </p>
+							<div class="inf">
+								<a href="" class="btn_B">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>			
+	
+				<div class="anouncements">
+					<h3>Announcements</h3>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, ex iure quidem laudantium suscipit et minus omnis voluptates numquam iusto?
+				</div>
+			</div>
+		</main>
+		<footer id="footer">
+			<div class="waves">
+				<div class="wave" id="wave1"></div>
+				<div class="wave" id="wave2"></div>
+				<div class="wave" id="wave3"></div>
+				<div class="wave" id="wave4"></div>
+			</div>
+			<div class="media">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-snapchat"></i></a>
+			</div>
+			<ul class="list">
+				<li><a href="#Home" class="a">Home</a></li>
+				<li><a href="#about" class="a">About us</a></li>
+				<li><a href="#services" class="a">Services</a></li>
+			</ul>
+			<p>©2021  PIXELS | All Rights Reserved</p>
+		</footer>
+	</div>	
+
+	<!-- FORM SIGN IN -->
+
+
+	<section>
+		<div class="form" id="modal">
+			<div class="form-box">
+					<button data-close-button class="close">&times;</button>
+				<div class="button-box">
+					<div id="btn"></div>
+						<button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+						<button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+				</div>
+				<div class="social-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google"></i></a>
+				</div>
+				<form id="login" class="input-group" method="GET" action="signUp">
+					<input type="text" class="input-field" placeholder="User Id" required>
+					<input type="password" class="input-field" placeholder="Password" required>
+					<input type="checkbox" class="check-box"><span>Remember Password</span>
+					<button type="submit" class="submit-btn" name="reg">Log in</button>
+				</form>
+				<form id="register" class="input-group" method="POST" action="signUp.php">
+					<input type="text" class="input-field" placeholder="User Id" required name="userId">
+					<input type="email" class="input-field" placeholder="Email Id" required name="emailId">
+					<input type="password" class="input-field" placeholder="Password" required name="password">
+					<input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+					<button type="submit" class="submit-btn" name="save">Register</button>
+				</form>
+			</div>
+<!--javascript-->				
+			<script>
+				
+				var x = document.getElementById("login");
+				var y = document.getElementById("register");
+				var z = document.getElementById("btn");
+	
+				function register(){
+					x.style.left ="-400px";
+					y.style.left ="50px";
+					z.style.left ="110px";
+				}
+	
+				function login(){
+					x.style.left ="50px";
+					y.style.left ="450px";
+					z.style.left ="0px";
+				}
+			</script>
+		</div>
+		<div id="overlay"></div>
+	</section>
+	
+ <script src="js/jquery-3.6.0.min.js"></script> 
+ <script src="app.js"></script>  
+</body>
+</html>
