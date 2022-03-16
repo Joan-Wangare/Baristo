@@ -22,8 +22,7 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
   overflow: hidden;
 }
-ul,
-a {
+ul,a {
   text-decoration: none;
   list-style: none;
 }
@@ -44,6 +43,9 @@ button {
   /* scroll-behavior: smooth;
   scroll-snap-type: y mandatory; */
 }
+
+/* mavbar */
+
 nav {
   z-index: 5;
   left: 0;
@@ -141,6 +143,8 @@ nav .icon-burger .line {
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
+
+/* food list */
 
 .adv-section {
   display: flex;
@@ -443,7 +447,7 @@ main {
   position: relative;
   width: 95%;
   /* height: 100vh; */
-  margin: 0 0 100px 40px;
+  margin: 0 0 100px 33px;
 }
 
 main > section {
@@ -454,7 +458,7 @@ main > section {
   flex-direction: column;
   row-gap: 20px;
   position: absolute;
-  width: 285px;
+  width: 234px;
   padding: 10px;
   height: 717px;
   right: 0;
