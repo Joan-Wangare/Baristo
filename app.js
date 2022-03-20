@@ -7,19 +7,28 @@ for (let i = 0; i < logo.length; i++) {
   console.log(`letter ${i} is ${logo[i].getTotalLength()}`);
 }
 
-// SIGN UP
+// NAVBAR
 
-const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const closeModalButtons = document.querySelectorAll("[data-close-button]");
-const overlay = document.getElementById("overlay");
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  menu.classList.toggle("active");
+})
+// document.querySelectorAll(".a").forEach(n => n.addEventListener("click"), () => {
+//   burger.classList.remove("active");
+//   menu.classList.remove("active");
+// })
 
 // CART SIDEBAR CODE
+
 const addToCart = document.querySelectorAll(".add-to-cart-btn");
 const cartPopSidebar = document.querySelector(".cart-sidebar");
 addToCart.forEach(function (btn) {
   btn.addEventListener("click", () => {
     cartPopSidebar.classList.add("showCart");
-    setTimeout(hideCart, 4000); //CALL THE hideCart AFTER 3secs of display
+    setTimeout(hideCart, 10000); //CALL THE hideCart AFTER 3secs of display
   });
 });
 
@@ -27,7 +36,12 @@ function hideCart() {
   //FUNCTION TO HIDE THE CART AFTER DISPLAY
   cartPopSidebar.classList.remove("showCart");
 }
-// END OF CART SIDEBAR CODE
+
+// SIGN UP
+
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
 
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {

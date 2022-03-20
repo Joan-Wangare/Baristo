@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lobster&display=swap");
 
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 *,
 ::after,
 ::before {
@@ -40,29 +46,29 @@ button {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  /* scroll-behavior: smooth;
-  scroll-snap-type: y mandatory; */
 }
 
-/* mavbar */
+/* navbar */
 
 nav {
+  position: relative;
   z-index: 5;
   left: 0;
   right: 0;
   top: 0;
   font-family: "M PLUS Rounded 1c", sans-serif;
-  padding: 0.5%;
   height: 60px;
   background: linear-gradient(35deg, #09beb8, #128ddf);
   animation: change 10s ease-in-out infinite;
 }
+
+/* nav-logo */
+
 nav .logo {
-  /* font-family: 'M PLUS Rounded 1c', cursive; */
-  font-weight: 700;
-  float: left;
+  position: absolute;
   margin-left: 12px;
-  width: 40%;
+  font-weight: 700;
+  margin-left: 12px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -75,11 +81,12 @@ nav .logo img {
   height: 40px;
   margin-left: 10px;
 }
+
+/* nav-links */
+
 nav .links {
-  float: right;
-  padding: 0;
-  margin: 0;
-  width: 25%;
+  position: absolute;
+  right: 5px;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -87,6 +94,25 @@ nav .links {
 }
 nav .links li {
   list-style: none;
+  padding: 0 10px;
+}
+nav .links a {
+  display: block;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+nav .links a:hover {
+  color: #fff;
+  transition: ease 0.5s;
+}
+nav .links .a:hover {
+  color: #fff;
+  background: #09beb8;
+  transition: 0.25s;
 }
 .b {
   border: none;
@@ -106,42 +132,162 @@ nav .links li {
 .b:hover {
   background-position: right;
 }
-nav .links a {
-  display: block;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000000;
-  text-decoration: none;
-}
-nav .links a:hover {
-  color: #fff;
-  transition: ease 0.5s;
-}
-nav .links .a:hover {
-  color: #fff;
-  background: #09beb8;
-  transition: 0.5s;
-}
 #nav-toggle {
   position: absolute;
   top: -100px;
 }
-nav .icon-burger {
+
+/* nav-hamburger */
+
+.burger {
   display: none;
   position: absolute;
-  right: 5%;
+  right: 11px;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 }
-nav .icon-burger .line {
-  width: 30px;
-  height: 5px;
+.line {
+  width: 22px;
+  height: 3px;
   background-color: #000000;
   margin: 5px;
   border-radius: 3px;
-  transition: all 0.3s ease-in-out;
+  transition: 0.5s ease;
+}
+
+/* search-icon */
+
+.search-bar {
+  position: absolute;
+  right: 22em;
+  padding: 13px 0 7px 0;
+	/* justify-content: center; */
+	/* max-width: 20em; */
+	display: flex;
+}
+.search-bar input {
+	background: transparent;
+	border-radius: 24px;
+	box-shadow: 0 0 0 0.4em #171717 inset;
+	padding: 0.75em;
+	transform: translate(0.5em,0.5em) scale(0.5);
+	transform-origin: 100% 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.search-btn {
+	background: #171717;
+	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+	padding: 0.75em;
+	position: relative;
+	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+	transform-origin: 0 50%;
+}
+.search-btn span {
+	display: inline-block;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+.search-bar input,
+.search-btn, 
+.search-btn:before, 
+.search-btn:after {
+	transition: all 0.5s ease-in-out;
+}
+.search-bar input,
+.search-btn {
+	width: 3em;
+	height: 3em;
+}
+.search-bar input:invalid:not(:focus),
+.search-btn {
+	cursor: pointer;
+}
+.search-bar input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+	outline: transparent;
+} 
+.search-bar input:focus,
+.search-bar input:valid {
+	background: #fff;
+  width: 25em;
+	border-radius: 0.375em 0 0 0.375em;
+	box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+	transform: scale(1);
+}
+.search-btn:before, 
+.search-btn:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+.search-btn:before {
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+	top: 0.75em;
+	left: 0.75em;
+	width: 1.2em;
+	height: 1.2em;
+}
+.search-btn:after {
+	background: #f1f1f1;
+	border-radius: 0 0.25em 0.25em 0;
+	top: 51%;
+	left: 51%;
+	width: 0.75em;
+	height: 0.25em;
+	transform: translate(0.2em,0) rotate(45deg);
+	transform-origin: 0 100%;
+}
+
+/* Active state */
+
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+	background: #008cff;
+	border-radius: 0 0.375em 0.375em 0;
+	transform: scale(1);
+}
+.search-bar input:focus + .search-btn:before, 
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before, 
+.search-bar input:valid + .search-btn:after {
+	opacity: 1;
+}
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+	background: #0c48db;
+}
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+	transform: translateY(1px);
+}
+@media screen and (prefers-color-scheme: dark) {
+	body, input {
+		color: #f1f1f1;
+	}
+	body {
+		background: #171717;
+	}
+	.search-bar input {
+		box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+	}
+	.search-bar input:focus,
+	.search-bar input:valid {
+		background: #3d3d3d;
+		box-shadow: 0 0 0 0.1em #3d3d3d inset;
+	}
+	.search-btn {
+		background: #f1f1f1;
+	}
 }
 
 /* food list */
@@ -152,10 +298,9 @@ nav .icon-burger .line {
   margin: 15px auto 0 auto;
 }
 .advert-section .advert_slider {
-  max-height: 500px;
-  height: 400px;
+  /* max-height: 500px;
+  height: 400px; */
   width: 100%;
-  /* background: url("../images/grocerys2.jpg"); */
   background-size: cover;
   background-position: center;
 }
@@ -337,10 +482,10 @@ nav .icon-burger .line {
   background: rgba(255, 255, 255);
   width: 0;
   height: 400px;
-  /* padding: 0 0px 5px 5px; */
+  padding: 0 0px 5px 5px;
   overflow-y: scroll;
   overflow-x: hidden;
-  transition: width 500ms cubic-bezier(0.04, 0.36, 0.87, 1.32);
+  transition: width 1s cubic-bezier(0.04, 0.36, 0.87, 1.32);
 }
 /* ---SHOW CART CLASS... */
 .showCart {
@@ -443,6 +588,8 @@ nav .icon-burger .line {
   background-position: right;
   color: #fff;
 }
+
+
 main {
   position: relative;
   width: 95%;
@@ -487,7 +634,7 @@ main > section {
 .card_f .inf .btn_B {
   text-decoration: none;
   border-radius: 6px;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   background: #e0dbdb;
   color: #000;
   font-size: 14px;
@@ -870,3 +1017,92 @@ section.text {
 .text h3 {
   text-align: center;
 }
+
+/* responsive webpage*/
+
+/* navbar */
+@media only screen and (max-width: 900px){
+  nav .logo {
+    margin-left: 0;
+  }
+  .line{
+    display: block;
+  }
+  .menu{
+    display: none;
+    transition: 0.5s ease;
+  }
+  .menu.active{
+    display: block;
+  }
+  .menu .links {
+    z-index: 5;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background: #3d3d3d;
+    height: 31vh;
+  }
+  .menu .links li {
+    padding: 0.85em 0;
+  }
+  .menu .links li a{
+    color: #09beb8;
+  }
+  .search-bar{
+    right: 5em;
+  }
+  .search-bar input:focus,
+  .search-bar input:valid {
+    width: 17em;
+  }
+  .burger{
+    display: block;
+  }
+  .burger.active .line:nth-child(2){
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+  .burger.active .line:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.5s ease;
+  }
+  .burger.active .line:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.5s ease;
+  }
+
+  /* blog */
+  .sidebar-blogs {
+    display: none;
+  }
+
+  /* slider */
+  .advert-section .advert_slider {
+    max-height: 300px;
+    height: 200px;
+  }
+  .cart-sidebar{
+    display: none;
+  }
+  
+  /* food */
+  main {
+    margin: 0 0 100px 19px;
+  }
+  #pop-section-title {
+    width: 100%;
+  }
+  .populate-items {
+    width: 100%;
+  }
+
+}
+/* @media only screen and (max-width: 900px){
+  
+
+} */
