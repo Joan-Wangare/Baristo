@@ -21,7 +21,7 @@
   background: #e0dbdb;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #128ddf;
+  background-color: #fff;
 }
 body {
   font-size: 90%;
@@ -471,6 +471,7 @@ nav .links .a:hover {
   border-radius: var(--default-border-radius);
   /* overflow-x: hidden; */
 }
+
 /* .adv-section .item {
     background: url("images/3.jpeg");
     background-repeat: no-repeat;
@@ -482,14 +483,14 @@ nav .links .a:hover {
   background: rgba(255, 255, 255);
   width: 0;
   height: 400px;
-  padding: 0 0px 5px 5px;
+  border-radius: 10px;
   overflow-y: scroll;
   overflow-x: hidden;
   transition: width 1s cubic-bezier(0.04, 0.36, 0.87, 1.32);
 }
 /* ---SHOW CART CLASS... */
 .showCart {
-  width: 29.5%;
+  width: 33.5%;
   margin-left: 15px;
 }
 /* --- END SHOW CART CLASS... */
@@ -501,14 +502,14 @@ nav .links .a:hover {
   background: #fff;
 }
 .cart-sidebar::-webkit-scrollbar-thumb {
-  background-color: #e0dbdb;
+  /* background-color: #e0dbdb; */
   /* border-radius: 100vw; */
 }
 
 #cart-title {
-  padding: 10px 0 0 5px;
+  padding: 10px 0 0 10px;
   /* background: #128DDF; */
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .cart-sidebar .cart-items-list {
   display: flex;
@@ -527,7 +528,7 @@ nav .links .a:hover {
   content: "";
   height: 2px;
   width: 25%;
-  background: green;
+  background: #128ddf;
   bottom: -8px;
   left: 50%;
   transform: translate(-50%);
@@ -535,7 +536,7 @@ nav .links .a:hover {
 }
 .cart-sidebar .cart-items-list .cart-item .cart-image {
   width: 150px;
-  height: 80px;
+  height: 60px;
 }
 .cart-sidebar .cart-items-list .cart-item .cart-image img {
   width: 100%;
@@ -565,12 +566,12 @@ nav .links .a:hover {
   text-align: center;
   line-height: 50px;
   padding: 10px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .summary .btn1 {
   padding: 10px;
   border-radius: 5px;
-  background-image: linear-gradient(to left, #e73ce7, #128ddf, #09beb8);
+  background: #F4F90A;
 }
 .btn {
   border: none;
@@ -585,8 +586,9 @@ nav .links .a:hover {
   color: #000000;
 }
 .btn:hover {
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
   background-position: right;
-  color: #fff;
+  /* color: #fff; */
 }
 
 
@@ -615,6 +617,7 @@ main > section {
 .card_f {
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
   padding: 5px;
+  border-radius: 5px;
   background: #fff;
   margin: 10px 0;
   line-height: 1.2rem;
@@ -648,7 +651,7 @@ main > section {
 .populate-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  width: 80.3%;
+  width: 80.8%;
   gap: 15px;
   background: #fdfdfd;
   padding: 15px;
@@ -716,7 +719,7 @@ main > section {
 #pop-section-title {
   padding: 15px 15px 0 15px;
   background: #fdfdfd;
-  width: 80.3%;
+  width: 80.8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1092,7 +1095,7 @@ section.text {
   
   /* food */
   main {
-    margin: 0 0 100px 19px;
+    margin: 0 0 100px 15px;
   }
   #pop-section-title {
     width: 100%;
