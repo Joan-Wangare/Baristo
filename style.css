@@ -94,7 +94,9 @@ nav .links {
 }
 nav .links li {
   list-style: none;
-  padding: 0 10px;
+}
+nav .links li button{
+  margin-left: 5px;
 }
 nav .links a {
   display: block;
@@ -160,7 +162,7 @@ nav .links .a:hover {
 
 .search-bar {
   position: absolute;
-  right: 22em;
+  right: 26.5em;
   padding: 13px 0 7px 0;
 	/* justify-content: center; */
 	/* max-width: 20em; */
@@ -729,7 +731,7 @@ main > section {
   border-radius: 5px;
 }
 
-/* CART PAGE/CHECK OUT */
+/* ------------CART PAGE/CHECK OUT-------------- */
 
 .cart-page{
   margin: 80px 150px 136px 150px;
@@ -796,22 +798,106 @@ th:last-child{
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* nav-cartpage */
+/* NAV ---- CART PAGE & VIEW MORE */
 
 .home{
   position: absolute;
-  right: 345px;
-  margin-top: 14px;
+  display: flex;
+  right: 18em;
+  margin-top: 13px;
+  padding: 0 5px;
 }
 .home a{
   color: #000;
-  font-size: 30px;
+  font-size: 27px;
+  padding: 5px 18px;
+}
+
+/* ------------VIEW MORE-------------- */
+
+.view-more{
+  margin: 15px 36px 100px 36px;
+}
+.view-more section{
+  margin-top: 15px;
+}
+.pop-section-title {
+  padding: 15px 15px 0 15px;
+  background: #fdfdfd;
+  width: 100%;
   display: flex;
-  right: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pop-section-title #view-more {
+  padding: 10px;
+  border-radius: 5px;
+}
+.populate_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  width: 100%;
+  gap: 15px;
+  background: #fdfdfd;
+  padding: 15px;
+}
+.populate_items .pop-item {
+  position: relative;
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s cubic-bezier(0.04, 0.36, 0.87, 1.32);
+}
+.pop_item:hover {
+  transform: translateY(-5px);
+}
+.populate_items .pop-item img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.populate_items .pop-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 190, 184, 0.3),
+    rgba(18, 11, 22, 0.4)
+  );
+  z-index: 1;
+  display: none;
+  transition: all 500ms ease;
+}
+.populate_items .pop-item:hover:after {
+  display: block;
+}
+.populate_items .pop-item:hover .item-description {
+  opacity: 1;
 }
 
 
-/* ---FOOTER... */
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------FOOTER---------------- */
 
 #footer {
   padding: 10px 10px;
