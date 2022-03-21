@@ -667,6 +667,18 @@ main > section {
   border-radius: 5px;
   transition: all 0.5s cubic-bezier(0.04, 0.36, 0.87, 1.32);
 }
+.populate-items .pop-item h4{
+  color: #fff;
+  position: absolute;
+  margin: -2.3em 1em;
+  opacity: 1;
+}
+h4{
+  display: block;
+  font-size: 1.17em;
+  text-shadow: 2px 2px #000000;
+  font-weight: bold;
+}
 .pop-item:hover {
   transform: translateY(-5px);
 }
@@ -676,6 +688,7 @@ main > section {
   overflow: hidden;
   position: relative;
 }
+
 .populate-items .pop-item::after {
   content: "";
   position: absolute;
@@ -685,11 +698,7 @@ main > section {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(9, 190, 184, 0.3),
-    rgba(18, 11, 22, 0.4)
-  );
+  background: linear-gradient(to bottom,rgba(9, 190, 184, 0.3),rgba(18, 11, 22, 0.4));
   z-index: 1;
   display: none;
   transition: all 500ms ease;
@@ -705,7 +714,7 @@ main > section {
   position: absolute;
   color: #ffff;
   padding: 10px;
-  top: 50%;
+  top: 66%;
   /* left: -100%; */
   z-index: 2;
   width: 200px;
@@ -850,6 +859,12 @@ th:last-child{
   border-radius: 5px;
   transition: all 0.5s cubic-bezier(0.04, 0.36, 0.87, 1.32);
 }
+.populate_items .pop-item h4{
+  color: #fff;
+  position: absolute;
+  margin: -2.3em 1em;
+  opacity: 1;
+}
 .pop_item:hover {
   transform: translateY(-5px);
 }
@@ -868,17 +883,13 @@ th:last-child{
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(9, 190, 184, 0.3),
-    rgba(18, 11, 22, 0.4)
-  );
+  background: linear-gradient(to bottom,rgba(9, 190, 184, 0.3),rgba(18, 11, 22, 0.4));
   z-index: 1;
-  display: none;
+  opacity: 0;
   transition: all 500ms ease;
 }
 .populate_items .pop-item:hover:after {
-  display: block;
+  opacity: 1;
 }
 .populate_items .pop-item:hover .item-description {
   opacity: 1;
