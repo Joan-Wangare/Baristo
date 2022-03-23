@@ -15,7 +15,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fill 0.5s ease forwards 4s;
+    animation: fill 0.5s ease forwards 6.5s;
 }
 
 #logo path:nth-child(1) {
@@ -95,13 +95,16 @@ body{
     }
 }
 #logo .x{
-    animation: knife 2s ease forwards  40s infinite;
-    /* display: none; */
+    animation: knife 1s ease-in forwards 6s ;
+    visibility: hidden;
 }
 @keyframes knife{
    
     from{
-        /* display: block; */
-        opacity: 1;
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
     }
 }
