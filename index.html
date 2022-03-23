@@ -17,7 +17,7 @@
   </head>
   <body>
 
-    <!-- navbar -->
+<!-------------- NAVBAR --------------->
 
     <div class="header">
       <nav class="con">
@@ -52,33 +52,29 @@
       </nav>
     </div>
     
-    <!-- body -->
+<!----------- BODY ------------->
     
     <div class="contain">
       
-    <!-- slider -->
+<!----------- SLIDER --------------->
+
       <section class="adv-section">
         <div class="advert_slider">
           <div class="slider">
-            <div class="slider__wrapper">
-              <div class="slider__items">
-                <div class="slider__item">
-                  <img src="images/1.jpg" alt="" />
-                </div>
-                <div class="slider__item">
-                  <img src="images/2.jpg" alt="" />
-                </div>
-                <div class="slider__item">
-                  <img src="images/4.jpg" alt="" />
-                </div>
-              </div>
+            <div id="slider">
+              <figure class="slider__item">
+                  <img src="images/1.jpg">
+                  <img src="images/2.jpg">
+                  <img src="images/5.jpg">
+                  <img src="images/4.jpg">
+                  <img src="images/2.jpg">
+              </figure>
             </div>
-            <span class="slider__control" data-slide="prev"></span>
-            <span class="slider__control" data-slide="next"></span>
           </div>
         </div>
 
-        <!-- cart -->
+<!---------- CART ----------->
+
         <div class="cart-sidebar">
           <h3 id="cart-title">Cart</h3>
           <ul class="cart-items-list">
@@ -126,6 +122,8 @@
           </div>
         </div>
       </section>
+
+<!-------------- MENU -------------->
 
       <main>
         <section>
@@ -296,6 +294,8 @@
           </article>
         </section>
 
+<!----------- BLOG ------------->
+
         <div class="sidebar-blogs">
           <div class="posts">
             <h3>Blogs</h3>
@@ -334,7 +334,7 @@
         </div>
       </main>
 
-<!-- footer -->
+<!------------ FOOTER ------------>
 
       <footer id="footer">
         <div class="waves">
@@ -344,22 +344,22 @@
           <div class="wave" id="wave4"></div>
         </div>
         <div class="media">
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-snapchat"></i></a>
+          <a href=""><i class="fa fa-twitter"></i></a>
+          <a href=""><i class="fa fa-instagram"></i></a>
+          <a href=""><i class="fa fa-facebook"></i></a>
+          <a href=""><i class="fa fa-snapchat"></i></a>
         </div>
         <ul class="list">
-          <li><a href="#Home" class="a">Home</a></li>
-          <li><a href="#about" class="a">About us</a></li>
-          <li><a href="#services" class="a">Services</a></li>
+          <li><a href="" class="a">Home</a></li>
+          <li><a href="" class="a">About us</a></li>
+          <li><a href="" class="a">Services</a></li>
         </ul>
         <p>©2021 PIXELS | All Rights Reserved</p>
       </footer>
       
     </div>
 
-    <!-- FORM SIGN IN -->
+<!----------------- FORM SIGN IN ---------------->
 
     <section>
       <div class="form" id="modal">
@@ -396,42 +396,15 @@
             >
             <button type="submit" class="submit-btn" name="reg">Log in</button>
           </form>
-          <form
-            id="register"
-            class="input-group"
-            method="POST"
-            action="signUp.php"
-          >
-            <input
-              type="text"
-              class="input-field"
-              placeholder="User Id"
-              required
-              name="userId"
-            />
-            <input
-              type="email"
-              class="input-field"
-              placeholder="Email Id"
-              required
-              name="emailId"
-            />
-            <input
-              type="password"
-              class="input-field"
-              placeholder="Password"
-              required
-              name="password"
-            />
-            <input type="checkbox" class="check-box" /><span
-              >I agree to the terms & conditions</span
-            >
-            <button type="submit" class="submit-btn" name="save">
-              Register
-            </button>
+          <form id="register" class="input-group" method="POST" action="signUp.php">
+            <input type="text" class="input-field" placeholder="User Id" required name="userId"/>
+            <input type="email" class="input-field" placeholder="Email Id" required name="emailId"/>
+            <input type="password" class="input-field" placeholder="Password" required name="password"/>
+            <input type="checkbox" class="check-box" />
+            <span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-btn" name="save"> Register </button>
           </form>
         </div>
-        <!--javascript-->
         <script>
           var x = document.getElementById("login");
           var y = document.getElementById("register");
