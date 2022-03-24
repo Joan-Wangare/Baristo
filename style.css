@@ -631,12 +631,11 @@ h4{
   height: 100vh;
   background: linear-gradient(35deg, #09beb8, #128ddf);
   transition: 1s;
-  /* display: none; */
+  display: none; /* REMEMBER TO REMOVE DISPLAY */
   transition: all 2s ease-in-out;
 }
 .intro.hide{
   transform: translateY(-100%);
-  /* display: none; */
 }
 #logo{
   position: absolute;

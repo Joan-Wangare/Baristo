@@ -9,6 +9,7 @@
 body {
     margin-top: 100px;
     background-color: #222;
+    /* background: #128ddf; */
 }
 
 @media(min-width:768px) {
@@ -57,7 +58,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #fff;
 }
 
 .top-nav>li>a:hover,
