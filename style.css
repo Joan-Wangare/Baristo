@@ -733,6 +733,59 @@ h4{
 
 /* ------------CART PAGE/CHECK OUT-------------- */
 
+.single-prod{
+  margin: 40px;
+}
+.row {
+  display: flex;
+}
+.col-2 {
+  flex: 50%;
+  padding: 10px; 
+}
+.single-prod h3{
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.single-prod select{
+  display: block;
+  padding: 10px;
+  margin: 20px 0;
+}
+.single-prod .se{
+  margin: 0 0 15px 0;
+}
+.single-prod input{
+  width: 40px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #128ddf;
+}
+input:focus{
+  outline: none;
+}
+.single-prod .se button{
+  background: #128ddf;
+  font-weight: bold;
+  font-size: 14px;
+}
+.single-prod .fa{
+  margin-left: 10px;
+}
+.single-prod .prog h2{
+  margin-bottom: 10px;
+}
+
+.pop-section-title #view_more {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ------------CART PAGE/CHECK OUT-------------- */
+
 .cart-page{
   margin: 80px 150px 136px 150px;
 }
@@ -1179,6 +1232,10 @@ section.text {
   text-align: center;
 }
 
+/*------------------- CHAT BOX ---------------*/
+
+
+
 /*------------------- RESPONSIVE WEB ---------------*/
 
     /* NAVBAR */
@@ -1269,18 +1326,24 @@ section.text {
   }
 
   /* cart-page */
-
   .cart-page{
     margin: 80px 60px 136px 60px;
   }
   .home{
     right: 50px;
   }
+
+  /* product page */
+  .single-prod .col-2{
+    padding: 10px 0;
+  }
+  .row{
+    display: block;
+  }
 }
 @media only screen and (max-width: 600px){
   
   /* cart-page */
-
   .cart-page{
     margin: 80px 40px 136px 40px;
   }
@@ -1292,8 +1355,8 @@ section.text {
   }
 
   /* slider */
-
   .advert_slider{
     height: 250px;
   }
+  
 }
