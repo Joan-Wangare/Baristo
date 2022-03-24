@@ -624,13 +624,19 @@ h4{
 
 .intro{
   position: fixed;
-  z-index: 2;
+  z-index: 99;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
   background: linear-gradient(35deg, #09beb8, #128ddf);
   transition: 1s;
+  /* display: none; */
+  transition: all 2s ease-in-out;
+}
+.intro.hide{
+  transform: translateY(-100%);
+  /* display: none; */
 }
 #logo{
   position: absolute;
