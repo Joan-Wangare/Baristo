@@ -457,6 +457,7 @@ nav .links .a:hover {
   font-weight: 600;
 }
 .btn {
+  text-decoration: none;
   border: none;
   width: max-content;
   padding: 10px 20px;
@@ -631,7 +632,7 @@ h4{
   height: 100vh;
   background: linear-gradient(35deg, #09beb8, #128ddf);
   transition: 1s;
-  display: none; /* REMEMBER TO REMOVE DISPLAY */
+  /* display: none; */
   transition: all 2s ease-in-out;
 }
 .intro.hide{
