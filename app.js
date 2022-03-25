@@ -2,13 +2,13 @@
 const splash = document.querySelector(".intro");
 const logo = document.querySelectorAll("#logo path");
 
-window.addEventListener("DOMContentLoaded", function(){
+// window.addEventListener("DOMContentLoaded", function(){
 
-  setTimeout(function(){
-    splash.classList.add("hide");
-  }, 8000)
+//   setTimeout(function(){
+//     splash.classList.add("hide");
+//   }, 8000)
 
-})
+// })
 
 for (let i = 0; i < logo.length; i++) {
   //   console.log("Letter " + i + " is " + logo[i].getTotalLength());

@@ -166,7 +166,9 @@
 
           <article class="populate-items">
             <div class="pop-item">
-              <img src="images/pasta.jpg" alt="" />
+              <div class="item-img">
+                <img src="images/pasta.jpg" alt="" />
+              </div>
               <h4>Name</h4>
               <div class="item-description">
                 <p>
@@ -434,7 +436,7 @@
           </form>
           <form id="register" class="input-group" method="POST" action="signUp.php">
             <input type="text" class="input-field" placeholder="User Id" required name="userId"/>
-            <input type="email" class="input-field" placeholder="Email Id" required name="emailId"/>
+            <input type="email" class="input-field" placeholder="Email Id" required name="email_Id"/>
             <input type="password" class="input-field" placeholder="Password" required name="password"/>
             <input type="checkbox" class="check-box" />
             <span>I agree to the terms & conditions</span>
