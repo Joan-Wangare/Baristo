@@ -533,7 +533,7 @@ main > section {
 }
 .populate-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   width: 80.8%;
   gap: 15px;
   background: #fdfdfd;
@@ -563,9 +563,14 @@ h4{
 .pop-item:hover {
   transform: translateY(-5px);
 }
-.populate-items .pop-item img {
+.populate-items .pop-item .item-img{
+  width: 238.39px;
+  height: 200px;
+}
+.populate-items .pop-item .item-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   overflow: hidden;
   position: relative;
 }
@@ -595,7 +600,7 @@ h4{
   position: absolute;
   color: #ffff;
   padding: 10px;
-  top: 66%;
+  top: 44%;
   /* left: -100%; */
   z-index: 2;
   width: 200px;
@@ -872,6 +877,13 @@ th:last-child{
   font-size: 27px;
   padding: 5px 18px;
 }
+.home p{
+  position: absolute;
+  margin-top: 7.6px;
+  right: 8.7em;
+  color: #fff;
+  font-size: 10px;
+}
 
 /* ------------VIEW MORE-------------- */
 
@@ -920,7 +932,7 @@ th:last-child{
   transform: translateY(-5px);
 }
 .populate_items .pop-item .item-img{
-  width: 200px;
+  width: 238.39px;
   height: 200px;
 }
 .populate_items .pop-item .item-img img {
@@ -1073,6 +1085,12 @@ footer .wave#wave4 {
   100% {
     background-position-x: 0px;
   }
+}
+
+/* ----ERROR PHP --- */
+
+.error{
+  background-color: #ee0b0b;
 }
 
 /* ----FORM --- */
@@ -1282,6 +1300,7 @@ section.text {
     padding: 0.85em 0;
   }
   .menu .links li a{
+    text-decoration: none;
     color: #09beb8;
   }
   .search-bar{

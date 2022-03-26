@@ -10,10 +10,10 @@ const logo = document.querySelectorAll("#logo path");
 
 // })
 
-for (let i = 0; i < logo.length; i++) {
-  //   console.log("Letter " + i + " is " + logo[i].getTotalLength());
-  console.log(`letter ${i} is ${logo[i].getTotalLength()}`);
-}
+// for (let i = 0; i < logo.length; i++) {
+//   //   console.log("Letter " + i + " is " + logo[i].getTotalLength());
+//   console.log(`letter ${i} is ${logo[i].getTotalLength()}`);
+// }
 
 // NAVBAR
 
@@ -29,10 +29,14 @@ burger.addEventListener("click", () => {
 //   menu.classList.remove("active");
 // })
 
-// CART SIDEBAR CODE
+// CART SIDEBAR CODE $$ ADD TO CART
 
 const addToCart = document.querySelectorAll(".add-to-cart-btn");
 const cartPopSidebar = document.querySelector(".cart-sidebar");
+let products = {
+
+}
+
 addToCart.forEach(function (btn) {
   btn.addEventListener("click", () => {
     cartPopSidebar.classList.add("showCart");
@@ -44,6 +48,40 @@ function hideCart() {
   //FUNCTION TO HIDE THE CART AFTER DISPLAY
   cartPopSidebar.classList.remove("showCart");
 }
+
+for (let i=0; i<addToCart.length; i++){
+  addToCart[i].addEventListener('click', () => {
+    cartNumbers();
+  })
+}
+
+function onLoadCartNumber(){
+  let productNumber = localStorage.getItem('cartNumbers');
+
+  if(productNumber){
+    document.querySelector('.home p').textContent = productNumber;
+  }
+
+}
+
+function cartNumbers() {
+  let productNumber = localStorage.getItem('cartNumbers');
+
+  productNumber = parseInt(productNumber);
+
+  if( productNumber ){
+    localStorage.setItem('cartNumbers', productNumber + 1);
+    document.querySelector('.home p').textContent = productNumber + 1;
+  } else {
+    localStorage.setItem('cartNumbers', 1);
+    document.querySelector('.home p').textContent = 1;
+  }
+  
+}
+onLoadCartNumber();
+
+
+
 
 // SIGN UP
 

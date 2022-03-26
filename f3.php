@@ -35,7 +35,7 @@
               </ul>
           </div>
           <div class="home">
-            <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
           <form action="javascript:" class="search-bar">
@@ -61,7 +61,9 @@
             </legend>
             <article class="populate_items">
                 <div class="pop-item">
-                  <img src="images/drinks.jpg" alt="" />
+                <div class="item-img">
+                  <img src="images/img1.jpg" alt="" />
+                </div>
                   <h4>Name</h4>
                   <div class="item-description">
                     <p>
@@ -72,7 +74,9 @@
                   </div>
                 </div>
                 <div class="pop-item">
-                  <img src="images/drinks.jpg" alt="" />
+                <div class="item-img">
+                  <img src="images/img1.jpg" alt="" />
+                </div>
                   <h4>Name</h4>
                   <div class="item-description">
                     <p>
@@ -83,7 +87,9 @@
                   </div>
                 </div>
                 <div class="pop-item">
-                  <img src="images/drinks.jpg" alt="" />
+                  <div class="item-img">
+                    <img src="images/img1.jpg" alt="" />
+                  </div>
                   <h4>Name</h4>
                   <div class="item-description">
                     <p>
@@ -94,7 +100,9 @@
                   </div>
                 </div>
                 <div class="pop-item">
-                  <img src="images/drinks.jpg" alt="" />
+                  <div class="item-img">
+                    <img src="images/img1.jpg" alt="" />
+                  </div>
                   <h4>Name</h4>
                   <div class="item-description">
                     <p>
@@ -105,7 +113,9 @@
                   </div>
                 </div>
                 <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
+                  <div class="item-img">
+                    <img src="images/img1.jpg" alt="" />
+                  </div>
                     <h4>Name</h4>
                     <div class="item-description">
                       <p>
@@ -116,73 +126,9 @@
                     </div>
                   </div>
                   <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
+                  <div class="item-img">
+                    <img src="images/img1.jpg" alt="" />
                   </div>
-                  <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
                     <h4>Name</h4>
                     <div class="item-description">
                       <p>
@@ -193,69 +139,6 @@
                     </div>
                   </div>
             </article>
-            <section>
-                <legend class="pop-section-title">
-                  <h3>Recently Viewed</h3>
-                  <button id="view-more">View More</button>
-                </legend>
-                <article class="populate_items">
-                  <div class="pop-item">
-                    <img src="images/img1.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/drinks.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/pasta.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/1.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                  <div class="pop-item">
-                    <img src="images/2.jpg" alt="" />
-                    <h4>Name</h4>
-                    <div class="item-description">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatibus, culpa?
-                      </p>
-                      <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                </article>
-              </section>
         </div>
 
     <!-- footer -->
