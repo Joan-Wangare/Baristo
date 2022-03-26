@@ -416,23 +416,11 @@
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-google"></i></a>
           </div>
-          <form id="login" class="input-group" method="GET" action="signUp">
-            <input
-              type="text"
-              class="input-field"
-              placeholder="User Id"
-              required
-            />
-            <input
-              type="password"
-              class="input-field"
-              placeholder="Password"
-              required
-            />
-            <input type="checkbox" class="check-box" /><span
-              >Remember Password</span
-            >
-            <button type="submit" class="submit-btn" name="reg">Log in</button>
+          <form id="login" class="input-group" method="POST" action="signUp.php">
+            <input type="text" class="input-field" placeholder="User Id"required name="userId"/>
+            <input type="password" class="input-field" placeholder="Password" required name="password"/>
+            <input type="checkbox" class="check-box" /><span>Remember Password</span>
+            <button type="submit" class="submit-btn" name="log">Log in</button>
           </form>
           <form id="register" class="input-group" method="POST" action="signUp.php">
             <input type="text" class="input-field" placeholder="User Id" required name="userId"/>
