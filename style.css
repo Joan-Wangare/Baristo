@@ -116,6 +116,37 @@ nav .links .a:hover {
   background: #09beb8;
   transition: 0.25s;
 }
+#account {
+  position: relative;
+  cursor: pointer;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize !important;
+}
+#logout_btn {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translate(-50%);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-transform: capitalize;
+  border-top: 1px solid rgb(189, 185, 185);
+  min-width: 100%;
+  margin: 0 !important;
+  display: none;
+  background-color: #09beb8;
+  
+}
+#account:hover {
+  background-color: #09beb8;
+}
+#account:hover #logout_btn {
+  display: block;
+}
 .b {
   border: none;
   font-weight: 800;
@@ -316,6 +347,7 @@ nav .links .a:hover {
   animation: 20s slider infinite;
 }
 #slider figure img {
+  object-fit: cover;
   width: 20%;
   height: 100%;
   float: left;
@@ -747,6 +779,7 @@ h4{
 
 .single-prod{
   margin: 40px;
+  min-height: 61vh;
 }
 .row {
   display: flex;
@@ -932,7 +965,7 @@ th:last-child{
   transform: translateY(-5px);
 }
 .populate_items .pop-item .item-img{
-  width: 238.39px;
+  width: auto;
   height: 200px;
 }
 .populate_items .pop-item .item-img img {

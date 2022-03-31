@@ -1,20 +1,12 @@
-<?php session_start();?>
+<?php include 'dp.php'?>
+<?php include 'includes/header.php';?>
+<?php include "admin-bm/functions.php";?>
+
 <?php if (isset($_GET['logout'])) {
   session_destroy();
-  unset($_SESSION['username']);    
+  unset($_SESSION['username']);
+  
 }?>
-<html lang="en">
-  <head>
-    <title>Baristo</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet"/>
-  </head>
-  <body>
 
     <div class="intro">
       <svg id="logo" width="766" height="111" viewBox="0 0 766 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +100,7 @@
             <p id="totalPrice">
               Total Price: <strong id="total-price">Ksh 2000</strong>
             </p>
-            <a class="btn btn1" href="cart.php">View Chart</a>
+            <a class="btn btn1" href="cart.php">View Cart</a>
           </div>
         </div>
       </section>
@@ -116,196 +108,82 @@
       <!-------------- MENU -------------->
 
       <main>
+
+      <!-- FOODS CATEGORY -->
         <section>
-          <legend id="pop-section-title">
-            <h3>Food</h3>
-            <a href="f1.php"><button id="view-more">View More</button></a>
-          </legend>
+        <?php 
 
+$query = "SELECT * FROM categories WHERE cat_title = 'foods'";
+$select_all_categories_sidebar = mysqli_query($conn, $query);
+?>
+
+<?php 
+while($row = mysqli_fetch_assoc($select_all_categories_sidebar)) {
+  $category_id = $row['cat_id'];
+  $category_title = $row['cat_title'];
+  echo "<legend id='pop-section-title'>
+            <h3>$category_title</h3>
+            <a href='category.php?category=$category_id'><button id='view-more'>View More ></button></a>
+          </legend>";
+  
+}
+
+?>
           <article class="populate-items">
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/pasta.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/pasta.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/pasta.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/pasta.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
+          <?php populateProducts($category_id);?>
           </article>
-        </section>
+      </section>
 
-        <section>
-          <legend id="pop-section-title">
-            <h3>Drinks</h3>
-            <a href="f2.php"><button id="view-more">View More</button></a>
-          </legend>
+      <!-- DRINKS CATEGORY -->
 
+      <section>
+        <?php 
+
+$query = "SELECT * FROM categories WHERE cat_title = 'drinks'";
+$select_all_categories_sidebar = mysqli_query($conn, $query);
+?>
+
+<?php 
+while($row = mysqli_fetch_assoc($select_all_categories_sidebar)) {
+  $category_id = $row['cat_id'];
+  $category_title = $row['cat_title'];
+  echo "<legend id='pop-section-title'>
+            <h3>$category_title</h3>
+            <a href='category.php?category=$category_id'><button id='view-more'>View More></button></a>
+          </legend>";
+  
+}
+
+?>
           <article class="populate-items">
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/drinks.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/drinks.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/drinks.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/drinks.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
+          <?php populateProducts($category_id);?>
           </article>
-        </section>
+      </section>
 
-        <section>
-          <legend id="pop-section-title">
-            <h3>Snacks</h3>
-            <a href="f3.php"><button id="view-more">View More</button></a>
-          </legend>
+      <!-- Snacks Category -->
+      <section>
+        <?php 
 
+$query = "SELECT * FROM categories WHERE cat_title = 'snacks'";
+$select_all_categories_sidebar = mysqli_query($conn, $query);
+?>
+
+<?php 
+while($row = mysqli_fetch_assoc($select_all_categories_sidebar)) {
+  $category_id = $row['cat_id'];
+  $category_title = $row['cat_title'];
+  echo "<legend id='pop-section-title'>
+            <h3>$category_title</h3>
+            <a href='category.php?category=$category_id'><button id='view-more'>View More></button></a>
+          </legend>";
+  
+}
+
+?>
           <article class="populate-items">
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/img1.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/img1.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/img1.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
-
-            <div class="pop-item">
-              <div class="item-img">
-                <img src="images/img1.jpg" alt="" />
-              </div>
-              <h4>Name</h4>
-              <div class="item-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus, culpa?
-                </p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </div>
+          <?php populateProducts($category_id);?>
           </article>
-        </section>
-
+      </section>
       <!----------- BLOG ------------->
 
         <div class="sidebar-blogs">
@@ -359,7 +237,7 @@
 
 <!----------------- FORM SIGN IN ---------------->
 
-      <?php include 'includes/form.php';?>
+      <?php include 'form.php';?>
 
     <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
     <script src="app.js"></script>
